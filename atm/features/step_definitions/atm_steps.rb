@@ -22,7 +22,7 @@ end
 
 # encoding utf-8
 CAPTURE_CASH_AMOUNT = Transform /^(£|\$|€)(\d+)$/ do |currency_symbol, digits|
-  # we now need a currency class
+  # we now need a currency class comment
   Currency::Money.new(digits, currency_symbol)
 end
 
